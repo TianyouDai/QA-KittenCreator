@@ -1,0 +1,28 @@
+html, body {
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    overscroll-behavior: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+canvas {
+    border-radius: 8px;
+    border: 1px solid #222;
+}
+
+#title {
+    position: absolute;
+    z-index: 10;
+    font-size: 5rem;
+    transform: rotate(-45deg);
+    left: 100px;
+    top: 100px;
+}
