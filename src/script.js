@@ -1,7 +1,3 @@
-function d2r(deg) {
-    return deg * Math.PI/180;
-}
-
 function main() {
     const c = document.getElementById("canvas");
     const ctx = c.getContext("2d");
@@ -16,7 +12,6 @@ function main() {
     let ly = SIZE/2 + (RADIUS * Math.sin(d2r(225)));
     ctx.fillStyle = "#333";
     ctx.beginPath();
-    //ctx.arc(lx, ly, 50, 0, 2 * Math.PI);
     ctx.ellipse(lx, ly, 50, 40, Math.PI/4, 0, 2 * Math.PI);
     ctx.fill();
     ctx.fillStyle = "pink";
@@ -29,7 +24,6 @@ function main() {
     ly = SIZE/2 + (RADIUS * Math.sin(d2r(315)));
     ctx.fillStyle = "#333";
     ctx.beginPath();
-    //ctx.arc(lx, ly, 50, 0, 2 * Math.PI);
     ctx.ellipse(lx, ly, 50, 40, -Math.PI/4, 0, 2 * Math.PI);
     ctx.fill();
     ctx.fillStyle = "pink";
