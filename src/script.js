@@ -2,14 +2,12 @@ function main() {
     const c = document.getElementById("canvas");
     const ctx = c.getContext("2d");
 
-    const RADIUS = 150;
-    const SIZE = 600;
     c.width  = SIZE;
     c.height = SIZE;
 
     // left ear
-    let lx = SIZE/2 + (RADIUS * Math.cos(d2r(225)));
-    let ly = SIZE/2 + (RADIUS * Math.sin(d2r(225)));
+    let lx = SIZE/2 + getX(RADIUS, 225);
+    let ly = SIZE/2 + getY(RADIUS, 225);
     ctx.fillStyle = "#333";
     ctx.beginPath();
     ctx.ellipse(lx, ly, 50, 40, Math.PI/4, 0, 2 * Math.PI);
@@ -20,8 +18,8 @@ function main() {
     ctx.fill();
 
     // right ear
-    lx = SIZE/2 + (RADIUS * Math.cos(d2r(315)));
-    ly = SIZE/2 + (RADIUS * Math.sin(d2r(315)));
+    lx = SIZE/2 + getX(RADIUS, 315);
+    ly = SIZE/2 + getY(RADIUS, 315);
     ctx.fillStyle = "#333";
     ctx.beginPath();
     ctx.ellipse(lx, ly, 50, 40, -Math.PI/4, 0, 2 * Math.PI);
