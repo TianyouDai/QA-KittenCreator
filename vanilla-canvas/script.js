@@ -16,11 +16,12 @@ function main() {
     let ly = SIZE/2 + (RADIUS * Math.sin(d2r(225)));
     ctx.fillStyle = "#333";
     ctx.beginPath();
-    ctx.arc(lx, ly, 50, 0, 2 * Math.PI);
+    //ctx.arc(lx, ly, 50, 0, 2 * Math.PI);
+    ctx.ellipse(lx, ly, 50, 40, Math.PI/4, 0, 2 * Math.PI);
     ctx.fill();
     ctx.fillStyle = "pink";
     ctx.beginPath();
-    ctx.arc(lx, ly, 25, 0, 2 * Math.PI);
+    ctx.arc(lx, ly, 20, 0, 2 * Math.PI);
     ctx.fill();
 
     // right ear
@@ -28,11 +29,12 @@ function main() {
     ly = SIZE/2 + (RADIUS * Math.sin(d2r(315)));
     ctx.fillStyle = "#333";
     ctx.beginPath();
-    ctx.arc(lx, ly, 50, 0, 2 * Math.PI);
+    //ctx.arc(lx, ly, 50, 0, 2 * Math.PI);
+    ctx.ellipse(lx, ly, 50, 40, -Math.PI/4, 0, 2 * Math.PI);
     ctx.fill();
     ctx.fillStyle = "pink";
     ctx.beginPath();
-    ctx.arc(lx, ly, 25, 0, 2 * Math.PI);
+    ctx.arc(lx, ly, 20, 0, 2 * Math.PI);
     ctx.fill();
 
     // body
@@ -41,9 +43,27 @@ function main() {
     ctx.ellipse(300, 500, 50, 100, 0, 0, 2 * Math.PI);
     ctx.fill();
 
-    // body
+    // tail
+    ctx.fillStyle = "#333";
+    ctx.rotate(d2r(-20));
+    ctx.translate(150, 565);
+    ctx.fillRect(0, 0, 80, 20);
+    ctx.beginPath();
+    ctx.arc(80, 10, 10, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.translate(-150, -565);
+    ctx.rotate(-d2r(-20));
+
+    // foot
+    ctx.fillStyle = "#222";
+    ctx.beginPath();
+    ctx.arc(270, 500, 20, 0, 2 * Math.PI);
+    ctx.arc(310, 500, 20, 0, 2 * Math.PI);
+    ctx.fill();
+
+    // body cover
     ctx.fillStyle = "white";
-    ctx.fillRect(250, 500, 100, 100, 0, 0, 2 * Math.PI);
+    ctx.fillRect(200, 495, 200, 200, 0, 0, 2 * Math.PI);
 
     // head
     ctx.fillStyle = "#333";
@@ -52,7 +72,7 @@ function main() {
     ctx.fill();
 
     // left eye
-    ctx.fillStyle = "aquamarine";
+    ctx.fillStyle = "LightGreen";
     ctx.beginPath();
     ctx.arc(250, 300, 40, 0, 2 * Math.PI);
     ctx.fill();
@@ -62,7 +82,7 @@ function main() {
     ctx.fill();
 
     // right eye
-    ctx.fillStyle = "aquamarine";
+    ctx.fillStyle = "LightGreen";
     ctx.beginPath();
     ctx.arc(350, 300, 40, 0, 2 * Math.PI);
     ctx.fill();
@@ -71,12 +91,16 @@ function main() {
     ctx.ellipse(350, 300, 7, 15, 0, 0, 2 * Math.PI);
     ctx.fill();
 
-    /*
+    ctx.fillStyle = "pink";
     ctx.beginPath();
-    ctx.moveTo(150, 150);
-    ctx.lineTo(100, 75);
-    ctx.lineTo(100, 25);
-    ctx.fill(); */
+    //ctx.arc(300, 375, 10, 0, 2 * Math.PI);
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.moveTo(300, 375);
+    ctx.lineTo(288, 355);
+    ctx.lineTo(312, 355);
+    ctx.fill();
 }
 
 window.onload = main;
