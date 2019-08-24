@@ -6,11 +6,13 @@ Hosted demo app: [Proj Demo](https://tianyoudai.github.io/QA-KittenCreator/jasmi
 
 Run the tests here and view the results: [Testing Demo](https://tianyoudai.github.io/QA-KittenCreator/jasmine/runner.html)
 
-# How the demo app works
+# How the demo app work
 When you visit the link above, JS is used to draw a cat to an html 5 canvas.
 
 # How testing works
-When the test link above is visited various tests are run locally aganist the code in the demo app. 
+When the test link above is visited various tests are run locally aganist the code in the demo app. Show below is the Jasmine output when the test runs successfully.
+
+![](./jasmineOutput.PNG)
 
 # Technologies Used
 The deom app is written in vanilla JS, HTML 5 and CSS 3. Client-side Jasmine is used to run the tests.
